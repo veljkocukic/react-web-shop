@@ -16,13 +16,8 @@ function ItemContainer() {
       />
     );
   });
-  useEffect(() => {
-    console.log(
-      "Array iz kontejnera" + array,
-      "render iz kontejnera" + renderOut
-    );
-  });
-  return <div className="main">{renderOut}</div>;
+  let rndr = array.length > 0 ? <div className="main">{renderOut}</div> : <div className="main"><h2>No items found</h2></div>
+  return rndr
 }
 
 export default ItemContainer;

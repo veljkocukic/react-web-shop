@@ -20,8 +20,6 @@ function Shop() {
         return true;
       }
     });
-    console.log("mibleFilter" + mobileFilter);
-    console.log("array pre " + array);
     setArray(mobileFilter);
   }
 
