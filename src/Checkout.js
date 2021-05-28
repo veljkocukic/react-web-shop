@@ -1,9 +1,18 @@
-import React, { useContext, useState } from "react";
+import React, { useContext,useEffect} from "react";
 import { DataContext } from "./Data";
 import CheckoutItems from "./CheckoutItems";
 
 function Checkout() {
-  let [, , , , item, setItem] = useContext(DataContext);
+
+
+  useEffect(()=>{
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop=0;
+  
+  },[])
+
+
+  let [, , , , item,,] = useContext(DataContext);
   console.log(item);
   let itemList;
 

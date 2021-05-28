@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect } from "react";
 import ReactDOM from "react-dom";
 import Header from "./Header";
 import Main from "./Main";
@@ -11,7 +11,16 @@ import SmallCart from "./SmallCart";
 import Footer from "./Footer";
 import Checkout from "./Checkout";
 
+
 function App() {
+
+  useEffect(()=>{
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop=0;
+  
+  },[])
+
+  
   return (
     <div>
       <Router>
