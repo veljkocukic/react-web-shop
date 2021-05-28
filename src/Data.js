@@ -110,7 +110,7 @@ export let DataProvider = (props) => {
 
   return (
     <DataContext.Provider
-      value={[data, setData, array, setArray, items, setItems]}
+      value={{data, setData, array, setArray, items, setItems}}
     >
       {props.children}
     </DataContext.Provider>

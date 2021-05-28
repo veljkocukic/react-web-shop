@@ -2,7 +2,7 @@ import React, { useContext,useEffect } from "react";
 import { DataContext } from "./Data";
 
 function SingleItem({ match }) {
-  const [data, setData, , , item, setItem] = useContext(DataContext);
+  const {data,setItems} = useContext(DataContext);
   const itemNew = data.filter((item) => {
     if (match.params.id === item.name) {
       return true;
@@ -23,8 +23,7 @@ function SingleItem({ match }) {
         return true;
       }
     });
-    setItem((prev) => [...prev, add[0]]);
-    console.log(item);
+    setItems((prev) => [...prev, add[0]]);
   }
   return (
     <div className="singleItem">

@@ -1,9 +1,9 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext} from "react";
 import { DataContext } from "./Data";
 import Item from "./Item";
 
 function ItemContainer() {
-  let [data, setData, array, setArray] = useContext(DataContext);
+  let {array} = useContext(DataContext);
 
   let renderOut = array.map((item) => {
     return (
