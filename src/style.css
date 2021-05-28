@@ -48,7 +48,6 @@ header ul {
   background-color: rgb(255, 255, 255);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  border: 1px solid rgb(11, 131, 211);
   gap: 40px;
 }
 
@@ -79,6 +78,8 @@ header ul {
   background-color: rgb(231, 248, 253);
   overflow: hidden;
   position: relative;
+  -webkit-box-shadow: 5px 13px 22px -14px rgba(0,0,0,0.4); 
+  box-shadow: 5px 13px 22px -14px rgba(0,0,0,0.4);
 }
 
 .Item img {
