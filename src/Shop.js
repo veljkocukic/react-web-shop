@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { DataContext } from "./Data";
 import ItemContainer from "./ItemContainer";
 
@@ -8,6 +8,12 @@ function Shop() {
     setArray(data);
   }, []);
 
+  useEffect(()=>{
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop=0;
+  
+  },[])
+  
   function handleClick(e) {
     let mobileFilter = data.filter((item) => {
       if (e.target.id === item.type) {

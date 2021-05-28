@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext,useEffect } from "react";
 import { DataContext } from "./Data";
 
 function SingleItem({ match }) {
@@ -8,6 +8,14 @@ function SingleItem({ match }) {
       return true;
     }
   });
+
+  useEffect(()=>{
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop=0;
+  
+  },[])
+  
+
 
   function handleCart(e) {
     let add = data.filter((item) => {

@@ -1,9 +1,17 @@
-import React from "react";
+import React,{useEffect} from "react";
 import News from "./News";
 import GoTo from "./GoTo";
 import About from "./About";
 
 function Main() {
+
+  useEffect(()=>{
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop=0;
+  
+  },[])
+
+
   return (
     <div className="mainDiv">
       <div className="wideImage">
