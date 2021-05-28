@@ -12,16 +12,16 @@ function Checkout() {
   },[])
 
 
-  let [, , , , item,,] = useContext(DataContext);
-  console.log(item);
+  let {items} = useContext(DataContext);
+  console.log(items);
   let itemList;
 
   function Alert() {
     alert("That's all from this site, thanks for visiting :)");
   }
 
-  if (item.length > 0) {
-    itemList = item.map((obj) => {
+  if (items.length > 0) {
+    itemList = items.map((obj) => {
       return <CheckoutItems img={obj.url} title={obj.name} price={obj.price} />;
     });
   } else {

@@ -2,16 +2,17 @@ import React, { useContext } from "react";
 import { DataContext } from "./Data";
 
 function CheckoutItems({ img, title, price }) {
-  let [, , , , item, setItem] = useContext(DataContext);
+  let {items,setItems} = useContext(DataContext);
 
-  function handleRemove() {
-    let filteredItem = item.filter((item) => {
+  function handleRemove(e) {
+    console.log(e.target.parentElement)
+    let filteredItem = items.filter((item) => {
       if (title != item.name) {
         return true;
       }
     });
 
-    setItem(filteredItem);
+    setItems(filteredItem);
   }
 
   return (

@@ -3,7 +3,7 @@ import { DataContext } from "./Data";
 import ItemContainer from "./ItemContainer";
 
 function Shop() {
-  let [data, setData, array, setArray] = useContext(DataContext);
+  let {data,array,setArray} = useContext(DataContext);
   useEffect(() => {
     setArray(data);
   }, []);
