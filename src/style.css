@@ -61,7 +61,7 @@ header ul {
 }
 .filter {
   margin-top: 150px;
-  border: 1px solid rgb(11, 131, 211);
+  border-bottom: 1px solid rgb(39, 141, 209);
   width: 70vw;
   display: flex;
   align-items: center;
