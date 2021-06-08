@@ -418,7 +418,7 @@ input {
 }
 
 .itemCnt {
-  width: 80% !important;
+  width:80vw;
   display: flex;
   align-items: center;
 }
